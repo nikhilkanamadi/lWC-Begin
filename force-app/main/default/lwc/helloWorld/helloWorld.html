@@ -1,0 +1,43 @@
+<template>
+
+    <!-- Using Salesforce Component Library -->
+    <lightning-card title="Two Way Data Binding">
+        <div class="slds-m-around_medium">
+            <div>Hello World!</div>
+            <!-- Data Binding from Js File -->
+            <div>My Full Name Is {fullname}</div>
+            <lightning-input type="text" label="Enter course name" onkeyup={updateCourse}>
+            </lightning-input>
+            <div>{fullname} is learning: {course}</div>
+
+        </div>
+
+    </lightning-card>
+
+    <lightning-card title="@track Property">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter city name" onkeyup={cityHandler}>
+            </lightning-input>
+            <div>My new city is :{address.city}</div>
+        </div>
+
+    </lightning-card>
+
+    <lightning-card title="Spread Operatotr(...)">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter pet name" onkeyup={petHandler}>
+            </lightning-input>
+            <div>My new pet is :{family.pet}</div>
+        </div>
+
+    </lightning-card>
+
+    <lightning-card title="getter method example">
+        <div class="slds-m-around_medium">
+            <div>First user in users array is {firstUser}</div>
+            <div>The product of {num1} and {num2} is {multiply}</div>
+        </div>
+
+    </lightning-card>
+
+</template>

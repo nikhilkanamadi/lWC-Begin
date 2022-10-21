@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="for:each loop">
+        <div class="slds-m-around-medium">
+            <template for:each={carlist} for:item="car">
+                <div key={car}>
+                    <ol>
+                        <li class="slds-item">
+                            {car}
+                        </li>
+                    </ol>
+
+                </div>
+
+            </template>
+
+        </div>
+    </lightning-card>
+    <lightning-card title="iterator loop">
+        <div class="slds-m-around-medium">
+
+            
+            <template iterator:ceo={ceoList}>
+                <div key={ceo.value.id}>
+                    <ol class="slds-has-dividers_top">
+                        <li class="slds-item">
+                            <strong>{ceo.value.company}</strong>
+                            {ceo.value.name}
+                        </li>
+                    </ol>
+                </div>
+            </template>
+
+         </div>
+    </lightning-card>
+</template>
